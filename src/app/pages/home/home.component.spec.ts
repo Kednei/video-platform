@@ -1,26 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import { Video } from '../../models/video.model'; // Certifique-se de que esse caminho está correto
-import { VideoService } from '../../services/video.service';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HomeComponent } from './home.component';
+import { CommonModule } from '@angular/common';
 
-@Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-})
-export class HomeComponent implements OnInit {
-playVideo: any;
-playVideo(arg0: any) {
-throw new Error('Method not implemented.');
-}
-[x: string]: any;
-playVideo(arg0: any) {
-throw new Error('Method not implemented.');
-}
-  videos: Video[] = [];
+describe('HomeComponent', () => {
+  let component: HomeComponent;
+  let fixture: ComponentFixture<HomeComponent>;
 
-  constructor(private videoService: VideoService) {}
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [CommonModule], // Certifique-se de importar o CommonModule
+      declarations: [HomeComponent],
+    }).compileComponents();
 
-  ngOnInit(): void {
-    this.videos = this.videoService.getVideos();
-  }
-}
+    fixture = TestBed.createComponent(HomeComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

@@ -1,5 +1,10 @@
-<div *ngFor="let video of videos">
-  <img [src]="video.thumbnail" alt="{{ video.title }}" />
-  <h3>{{ video.title }}</h3>
-  <p>{{ video.description }}</p>
+<div *ngIf="videos.length > 0; else noVideos">
+  <div *ngFor="let video of videos" class="video-card">
+    <img [src]="video.thumbnail" alt="Thumbnail" />
+    <h3>{{ video.title }}</h3>
+    <p>{{ video.description }}</p>
+  </div>
 </div>
+<ng-template #noVideos>
+  <p>Nenhum vídeo disponível no momento.</p>
+</ng-template>
