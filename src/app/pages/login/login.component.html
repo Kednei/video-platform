@@ -1,0 +1,14 @@
+<div class="login-container">
+  <h1>Login na Plataforma</h1>
+
+  <button (click)="loginWithGoogle()">Entrar com Google</button>
+  <button (click)="logout()" *ngIf="isAuthenticated">Sair</button>
+
+  <div *ngIf="!isAuthenticated">
+    <p>Por favor, faça login para acessar o conteúdo.</p>
+  </div>
+
+  <div *ngIf="isAuthenticated">
+    <p>Você está autenticado!</p>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+{
+  "users": [],
+  "videos": [
+    {
+      "id": 1,
+      "title": "Exemplo de Vídeo 1",
+      "description": "Descrição do Vídeo 1",
+      "thumbnail": "https://via.placeholder.com/150",
+      "views": 0
+    },
+    {
+      "id": 2,
+      "title": "Exemplo de Vídeo 2",
+      "description": "Descrição do Vídeo 2",
+      "thumbnail": "https://via.placeholder.com/150",
+      "views": 0
+    }
+  ]
+}
